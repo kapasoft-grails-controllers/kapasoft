@@ -77,7 +77,7 @@ log4j = {
     //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
     //}
 
-    error  'org.codehaus.groovy.grails.web.servlet',        // controllers
+    warn  'org.codehaus.groovy.grails.web.servlet',        // controllers
            'org.codehaus.groovy.grails.web.pages',          // GSP
            'org.codehaus.groovy.grails.web.sitemesh',       // layouts
            'org.codehaus.groovy.grails.web.mapping.filter', // URL mapping
@@ -105,6 +105,13 @@ grails{
     }
 
 }
+
+// Added by the Spring Security Core plugin:
+//grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.minnehahalofts.app.User'
+//grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.minnehahalofts.app.UserRole'
+//grails.plugins.springsecurity.authority.className = 'com.minnehahalofts.app.Role'
+//grails.plugins.springsecurity.successHandler.defaultTargetUrl = '/home'
+
 
 /********Cache Plugin********/
 //cacheDomainsPlugin.host = 'localhost'
